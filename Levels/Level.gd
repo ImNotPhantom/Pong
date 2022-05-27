@@ -3,13 +3,13 @@ extends Node
 var playerScore = 0
 var opponentScore = 0
 
-func _on_WallLeft_body_entered(body):
+func _on_WallLeft_body_entered(_body):
 	goal("left")
 
-func _on_WallRight_body_entered(body):
+func _on_WallRight_body_entered(_body):
 	goal("right")
 
-func _process(delta):
+func _process(_delta):
 	$PlayerScore.text = str(playerScore - 1)
 	$OpponentScore.text = str(opponentScore)
 	$CountdownLabel.text = str(int($CountdownTimer.time_left) + 1)
