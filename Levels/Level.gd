@@ -32,7 +32,7 @@ func goal(dir):
 		get_tree().change_scene("res://Menu/Main/MainMenu.tscn")
 	elif playerScore >= 10:
 		$Win.visible = true
-		$win.text = "Player 1 Wins!"
+		$Win.text = "Player 1 Wins!"
 		get_tree().call_group("BallGroup", 'stop_ball')
 		yield(get_tree().create_timer(2.0), "timeout")
 		get_tree().change_scene("res://Menu/Main/MainMenu.tscn")
